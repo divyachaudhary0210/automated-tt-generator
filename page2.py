@@ -1,0 +1,26 @@
+import page1 as pg
+from tkinter import *
+window=Tk()
+n=IntVar()
+m=IntVar()
+l3=Label(window, text="Number of main subjects you want to add", height="3", width="30")
+l4=Label(window, text="Number extra subjects you want to add", height="3", width="30")
+l1=Label(window, text="First Name", height="3", width="30")
+l2=Label(window, text="Last Name", height="3", width="30")
+b1=Button(window,text="GENERATE TIMETABLE",command=lambda : pg.generator(n.get(),m.get()))
+n1=Entry(window)
+n2=Entry(window)
+n3=Entry(window,textvariable=n)
+n4=Entry(window,textvariable=m)
+l1.grid(row=0, column=0)
+n1.grid(row=0,column=1)
+l2.grid(row=0,column=3)
+n2.grid(row=0,column=4)
+l3.grid(row=3,column=1)
+n3.grid(row=3,column=2)
+l4.grid(row=3,column=5)
+n4.grid(row=3,column=6)
+b1.grid(row=5,column=4)
+
+
+window.mainloop()
